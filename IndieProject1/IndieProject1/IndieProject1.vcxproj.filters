@@ -22,6 +22,15 @@
     <Filter Include="TimeFile">
       <UniqueIdentifier>{06da295f-ed32-4cf6-90e2-69aee6527120}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CharcterFile\BaseFile">
+      <UniqueIdentifier>{9bce4a27-3bcb-4681-90c8-6597b152779c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ColliderFile">
+      <UniqueIdentifier>{76926fdb-5699-4eaf-ba5b-5b1e0c078ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile">
+      <UniqueIdentifier>{8ab0a0dc-f0e6-4f4d-9edf-037bfe8d8f46}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -40,6 +49,18 @@
     </ClInclude>
     <ClInclude Include="Time.hpp">
       <Filter>TimeFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.hpp">
+      <Filter>CharcterFile\BaseFile</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollider.hpp">
+      <Filter>ColliderFile</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtil.hpp">
+      <Filter>MathFile</Filter>
+    </ClInclude>
+    <ClInclude Include="DxMath.hpp">
+      <Filter>MathFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
