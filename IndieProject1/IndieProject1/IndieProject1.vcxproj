@@ -147,6 +147,7 @@
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="DxMath.hpp" />
     <ClInclude Include="GameManager.hpp" />
+    <ClInclude Include="Geometry.hpp" />
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="MathUtil.hpp" />
     <ClInclude Include="Time.hpp" />
