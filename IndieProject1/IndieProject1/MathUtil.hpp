@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <limits>
 
-namespace MathUtil
+namespace mathutil
 {
 	// ’è”
 	inline constexpr float EPSILON = 1e-6f;
@@ -32,7 +32,7 @@ namespace MathUtil
 	template <class T>
 	inline constexpr T Clamp(T value, T min, T max) noexcept
 	{
-		return (value < min) ? min : (value > max) ? max : v;
+		return (value < min) ? min : (value > max) ? max : value;
 	}
 
 	// üŒ`•âŠÔ

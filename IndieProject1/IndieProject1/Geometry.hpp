@@ -1,9 +1,9 @@
 #pragma once
 #include "DxLib.h"
-#include "MathUtil.hpp"
-#include "DxMath.hpp"
+#include "mathutil.hpp"
+#include "dxmath.hpp"
 
-namespace Geometry
+namespace geometry
 {
 	// ê¸ï™ç≈ãﬂì_ÇÃåãâ 
 	struct ClosestPointResult
@@ -31,29 +31,29 @@ namespace Geometry
 
 	inline float DistSq(const VECTOR& a, const VECTOR& b) noexcept
 	{
-		return DxMath::DistanceSq(a, b);
+		return dxmath::DistanceSq(a, b);
 	}
 
 	inline ClosestPointResult ClosestPointOnSegment(const VECTOR& p, const VECTOR& a, const VECTOR& b) noexcept
 	{
-		const VECTOR ab = DxMath::Sub(b,a);
-		const float abLenSq = DxMath::LengthSq(ab);
+		const VECTOR ab = dxmath::Sub(b,a);
+		const float abLenSq = dxmath::LengthSq(ab);
 
 		ClosestPointResult r{};
 
-		if (abLenSq <= MathUtil::EPSILON * MathUtil::EPSILON)
+		if (abLenSq <= mathutil::EPSILON * mathutil::EPSILON)
 		{
 			r.t = 0.0f;
 			r.point = a;
 			return r;
 		}
 
-		const VECTOR ap = DxMath::Sub(p, a);
-		const float tRaw = DxMath::Dot(ap, ab) / abLenSq;
-		const float t = MathUtil::Clamp(tRaw, 0.0f, 1.0f);
+		const VECTOR ap = dxmath::Sub(p, a);
+		const float tRaw = dxmath::Dot(ap, ab) / abLenSq;
+		const float t = mathutil::Clamp(tRaw, 0.0f, 1.0f);
 
 		r.t = t;
-		r.point = DxMath::Add(a, DxMath::Mult(ab, t));
+		r.point = dxmath::Add(a, dxmath::Mult(ab, t));
 		return r;
 	}
 
@@ -61,16 +61,16 @@ namespace Geometry
 	{
 		SegmentSegmentResult out{};
 
-		const VECTOR d1 = DxMath::Sub(a1, a0);
-		const VECTOR d2 = DxMath::Sub(b1, b0);
-		const VECTOR r = DxMath::Sub(a0, b0);
+		const VECTOR d1 = dxmath::Sub(a1, a0);
+		const VECTOR d2 = dxmath::Sub(b1, b0);
+		const VECTOR r = dxmath::Sub(a0, b0);
 
-		const float a = DxMath::Dot(d1, d1);
-		const float e = DxMath::Dot(d2, d2);
-		const float f = DxMath::Dot(d2, r);
+		const float a = dxmath::Dot(d1, d1);
+		const float e = dxmath::Dot(d2, d2);
+		const float f = dxmath::Dot(d2, r);
 
-		if (a <= MathUtil::EPSILON * MathUtil::EPSILON &&
-			e <= MathUtil::EPSILON * MathUtil::EPSILON)
+		if (a <= mathutil::EPSILON * mathutil::EPSILON &&
+			e <= mathutil::EPSILON * mathutil::EPSILON)
 		{
 			out.tA = 0.0f;
 			out.tB = 0.0f;
@@ -80,7 +80,7 @@ namespace Geometry
 			return out;
 		}
 
-		if (a <= MathUtil::EPSILON * MathUtil::EPSILON)
+		if (a <= mathutil::EPSILON * mathutil::EPSILON)
 		{
 			out.tA = 0.0f;
 			const auto cp = ClosestPointOnSegment(a0, b0, b1);
@@ -91,7 +91,7 @@ namespace Geometry
 			return out;
 		}
 
-		if (e < MathUtil::EPSILON * MathUtil::EPSILON)
+		if (e < mathutil::EPSILON * mathutil::EPSILON)
 		{
 			const auto cp = ClosestPointOnSegment(b0, a0, a1);
 			out.tA = cp.t;
@@ -102,48 +102,48 @@ namespace Geometry
 			return out;
 		}
 
-		const float b = DxMath::Dot(d1, d2);
-		const float c = DxMath::Dot(d1, r);
+		const float b = dxmath::Dot(d1, d2);
+		const float c = dxmath::Dot(d1, r);
 		const float demon = a * e - b * b;
 
 		float s = 0.0f;
 		float t = 0.0f;
 
-		if (std::fabs(demon) <= MathUtil::EPSILON)
+		if (std::fabs(demon) <= mathutil::EPSILON)
 		{
 			s = 0.0f;
-			t = MathUtil::Clamp(f / e, 0.0f, 1.0f);
+			t = mathutil::Clamp(f / e, 0.0f, 1.0f);
 		}
 		else
 		{
-			s = MathUtil::Clamp((b * f - c * e) / demon, 0.0f, 1.0f);
+			s = mathutil::Clamp((b * f - c * e) / demon, 0.0f, 1.0f);
 
 			const float tNom = b * c + f;
-			t = MathUtil::Clamp(tNom / e, 0.0f, 1.0f);
+			t = mathutil::Clamp(tNom / e, 0.0f, 1.0f);
 		}
 
 		{
 			const float sNom = b * t - c;
-			s = MathUtil::Clamp(sNom / a, 0.0f, 1.0f);
+			s = mathutil::Clamp(sNom / a, 0.0f, 1.0f);
 		}
 
 		out.tA = s;
 		out.tB = t;
-		out.closestA = DxMath::Add(a0, DxMath::Mult(d1, s));
-		out.closestB = DxMath::Add(b0, DxMath::Mult(d2, t));
+		out.closestA = dxmath::Add(a0, dxmath::Mult(d1, s));
+		out.closestB = dxmath::Add(b0, dxmath::Mult(d2, t));
 		out.distSq = DistSq(out.closestA, out.closestB);
 		return out;
 	}
 
 	inline CapsuleEndpoints CalcCapsuleEndpoints(const VECTOR& center, const VECTOR& upDir, float halfHeight) noexcept
 	{
-		const VECTOR axis = DxMath::SafeNomalize(upDir, VGet(0, 1, 0));
-		const VECTOR offset = DxMath::Mult(axis, halfHeight);
+		const VECTOR axis = dxmath::SafeNomalize(upDir, VGet(0, 1, 0));
+		const VECTOR offset = dxmath::Mult(axis, halfHeight);
 
 		CapsuleEndpoints ep{};
 
-		ep.p0 = DxMath::Sub(center, offset);
-		ep.p1 = DxMath::Add(center, offset);
+		ep.p0 = dxmath::Sub(center, offset);
+		ep.p1 = dxmath::Add(center, offset);
 		return ep;
 	}
 }

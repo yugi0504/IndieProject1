@@ -139,12 +139,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ColliderMath.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Character.hpp" />
+    <ClInclude Include="ColliderMath.hpp" />
     <ClInclude Include="DxMath.hpp" />
     <ClInclude Include="GameManager.hpp" />
     <ClInclude Include="Geometry.hpp" />

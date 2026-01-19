@@ -42,6 +42,9 @@
     <ClCompile Include="Time.cpp">
       <Filter>TimeFile</Filter>
     </ClCompile>
+    <ClCompile Include="ColliderMath.cpp">
+      <Filter>MathFile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.hpp">
@@ -63,6 +66,9 @@
       <Filter>MathFile</Filter>
     </ClInclude>
     <ClInclude Include="Geometry.hpp">
+      <Filter>MathFile</Filter>
+    </ClInclude>
+    <ClInclude Include="ColliderMath.hpp">
       <Filter>MathFile</Filter>
     </ClInclude>
   </ItemGroup>

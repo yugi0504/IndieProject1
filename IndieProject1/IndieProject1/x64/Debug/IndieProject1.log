@@ -1,5 +1,13 @@
-﻿  GameManager.cpp
+﻿  ColliderMath.cpp
+  GameManager.cpp
+C:\Users\student\Desktop\IndieProject1\IndieProject1\IndieProject1\mathutil.hpp(35,54): error C3861: 'v': 識別子が見つかりませんでした
+  (ソース ファイル 'ColliderMath.cpp' をコンパイルしています)
+  
+C:\Users\student\Desktop\IndieProject1\IndieProject1\IndieProject1\mathutil.hpp(35,54): error C2065: 'v': 定義されていない識別子です。
+  (ソース ファイル 'ColliderMath.cpp' をコンパイルしています)
+  
+C:\Users\student\Desktop\IndieProject1\IndieProject1\IndieProject1\ColliderMath.cpp(6,1): error C2059: 構文エラー: '}'
+C:\Users\student\Desktop\IndieProject1\IndieProject1\IndieProject1\ColliderMath.cpp(6,1): error C2143: 構文エラー: ';' が '}' の前にありません。
   main.cpp
+  Time.cpp
   コードを生成中...
-LIBCMTD.lib(exe_winmain.obj) : error LNK2019: 未解決の外部シンボル WinMain が関数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) で参照されました
-C:\Users\student\Desktop\IndieProject1\IndieProject1\x64\Debug\IndieProject1.exe : fatal error LNK1120: 1 件の未解決の外部参照

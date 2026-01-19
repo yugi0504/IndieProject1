@@ -1,9 +1,9 @@
 #pragma once
 #include "DxLib.h"
 #include <cmath>
-#include "MathUtil.hpp"
+#include "mathutil.hpp"
 
-namespace DxMath
+namespace dxmath
 {
 	// ƒxƒNƒgƒ‹“ñæ’·
 	inline float LengthSq(const VECTOR& v) noexcept
@@ -55,7 +55,7 @@ namespace DxMath
 	inline VECTOR SafeNomalize(const VECTOR& v, const VECTOR& fallback = VGet(0, 1, 0)) noexcept
 	{
 		const float lsq = Length(v);
-		if (lsq <= MathUtil::EPSILON * MathUtil::EPSILON) return fallback;
+		if (lsq <= mathutil::EPSILON * mathutil::EPSILON) return fallback;
 		const float invLen = 1.0f / std::sqrt(lsq);
 		return Mult(v, invLen);
 	}
