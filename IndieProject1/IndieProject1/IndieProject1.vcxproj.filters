@@ -31,6 +31,18 @@
     <Filter Include="MathFile">
       <UniqueIdentifier>{8ab0a0dc-f0e6-4f4d-9edf-037bfe8d8f46}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MathFile\MathFile">
+      <UniqueIdentifier>{6dac8d5d-585a-43db-8632-bb898304ec91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile\ColliderMathFile">
+      <UniqueIdentifier>{788e6c56-04aa-493c-ad58-028a7100a619}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile\GeometryFile">
+      <UniqueIdentifier>{73e172cf-2137-4601-8ffd-3f88edd27923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\Seane">
+      <UniqueIdentifier>{2ac4e504-2e60-4a5b-9c0f-d7976f73cd84}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -43,7 +55,7 @@
       <Filter>TimeFile</Filter>
     </ClCompile>
     <ClCompile Include="ColliderMath.cpp">
-      <Filter>MathFile</Filter>
+      <Filter>MathFile\ColliderMathFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -59,17 +71,17 @@
     <ClInclude Include="ICollider.hpp">
       <Filter>ColliderFile</Filter>
     </ClInclude>
-    <ClInclude Include="MathUtil.hpp">
-      <Filter>MathFile</Filter>
+    <ClInclude Include="ColliderMath.hpp">
+      <Filter>MathFile\ColliderMathFile</Filter>
     </ClInclude>
     <ClInclude Include="DxMath.hpp">
-      <Filter>MathFile</Filter>
+      <Filter>MathFile\MathFile</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtil.hpp">
+      <Filter>MathFile\MathFile</Filter>
     </ClInclude>
     <ClInclude Include="Geometry.hpp">
-      <Filter>MathFile</Filter>
-    </ClInclude>
-    <ClInclude Include="ColliderMath.hpp">
-      <Filter>MathFile</Filter>
+      <Filter>MathFile\GeometryFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
