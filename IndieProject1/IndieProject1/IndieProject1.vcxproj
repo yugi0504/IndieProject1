@@ -145,6 +145,7 @@
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CapsuleCollider.hpp" />
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="ColliderMath.hpp" />
     <ClInclude Include="DxMath.hpp" />
@@ -152,7 +153,9 @@
     <ClInclude Include="Geometry.hpp" />
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="MathUtil.hpp" />
+    <ClInclude Include="SphereCollider.hpp" />
     <ClInclude Include="Time.hpp" />
+    <ClInclude Include="Transform.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

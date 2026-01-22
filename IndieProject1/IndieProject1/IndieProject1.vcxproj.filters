@@ -43,6 +43,9 @@
     <Filter Include="ManagerFile\Seane">
       <UniqueIdentifier>{2ac4e504-2e60-4a5b-9c0f-d7976f73cd84}</UniqueIdentifier>
     </Filter>
+    <Filter Include="TransformFile">
+      <UniqueIdentifier>{a54386ee-2fe1-4107-b115-b5be0b94ea42}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -82,6 +85,15 @@
     </ClInclude>
     <ClInclude Include="Geometry.hpp">
       <Filter>MathFile\GeometryFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.hpp">
+      <Filter>TransformFile</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereCollider.hpp">
+      <Filter>ColliderFile</Filter>
+    </ClInclude>
+    <ClInclude Include="CapsuleCollider.hpp">
+      <Filter>ColliderFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
