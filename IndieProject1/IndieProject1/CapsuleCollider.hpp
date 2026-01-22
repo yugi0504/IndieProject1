@@ -1,6 +1,7 @@
 #pragma once
 #include "ICollider.hpp"
 #include "ColliderMath.hpp"
+#include <algorithm>
 
 class CapsuleCollider final : public ICollider
 {
