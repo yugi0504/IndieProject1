@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CapsuleCollider.cpp" />
     <ClCompile Include="ColliderMath.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
@@ -148,6 +149,8 @@
     <ClInclude Include="CapsuleCollider.hpp" />
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="ColliderMath.hpp" />
+    <ClInclude Include="CollisionTest.hpp" />
+    <ClInclude Include="CollisionTest.cpp" />
     <ClInclude Include="DxMath.hpp" />
     <ClInclude Include="GameManager.hpp" />
     <ClInclude Include="Geometry.hpp" />

@@ -3,7 +3,7 @@
 namespace collision
 {
 	// 0‹——£—p‚ÌˆÀ‘S‚È–@üì¬
-	static VECTOR MakeSafeNomal(const VECTOR& v, const VECTOR& fallback)noexcept
+	static VECTOR MakeSafeNomal(const VECTOR& v, const VECTOR& fallback) noexcept
 	{
 		return dxmath::SafeNomalize(v, fallback);
 	}
@@ -94,5 +94,38 @@ namespace collision
 
 		if (out) *out = hr;
 		return true;
+	}
+
+	bool SphereSphere(const Sphere& a, const Sphere& b, HitResult* out) noexcept
+	{
+		const float rSum = a.radius + b.radius;
+		const float rSumSq = rSum * rSum;
+
+		const float distSq = dxmath::DistanceSq(a.center, b.center);
+		if (distSq > rSumSq)
+		{
+			if (out) *out = HitResult{};
+			return false;
+		}
+
+		HitResult hr{};
+		hr.hit = true;
+
+		const float dist = std::sqrt(max(distSq, 0.0f));
+		hr.penetration = rSum - dist;
+
+		VECTOR n = dxmath::SafeNomalize(dxmath::Sub(b.center, a.center), VGet(0, 1, 0));
+		hr.normal = n;
+
+		hr.pointA = dxmath::Add(a.center, dxmath::Mult(n, a.radius));
+		hr.pointB = dxmath::Sub(b.center, dxmath::Mult(n, b.radius));
+
+		const VECTOR push = dxmath::Mult(n, hr.penetration);
+		hr.pushOutA = dxmath::Mult(push, -0.5f);
+		hr.pushOutB = dxmath::Mult(push, 0.5f);
+
+		if (out) *out = hr;
+		return true;
+
 	}
 }

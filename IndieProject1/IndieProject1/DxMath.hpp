@@ -54,7 +54,7 @@ namespace dxmath
 	// 零長対応の正規化
 	inline VECTOR SafeNomalize(const VECTOR& v, const VECTOR& fallback = VGet(0, 1, 0)) noexcept
 	{
-		const float lsq = Length(v);
+		const float lsq = LengthSq(v);
 		if (lsq <= mathutil::EPSILON * mathutil::EPSILON) return fallback;
 		const float invLen = 1.0f / std::sqrt(lsq);
 		return Mult(v, invLen);
@@ -76,5 +76,39 @@ namespace dxmath
 	inline VECTOR Direction(const VECTOR& from, const VECTOR& to, const VECTOR& fallback = VGet(0, 0, 1)) noexcept
 	{
 		return SafeNomalize(Sub(to, from), fallback);
+	}
+
+	// ラジアン -> 回転行列
+	inline MATRIX RotFromEulerXYZ(const VECTOR& rotRad) noexcept
+	{
+		const MATRIX rx = MGetRotX(rotRad.x);
+		const MATRIX ry = MGetRotY(rotRad.y);
+		const MATRIX rz = MGetRotZ(rotRad.z);
+
+		return MMult(rx, MMult(ry, rz));
+	}
+
+	// ローカル方向ベクトルを回転しワールド変換
+	inline VECTOR DirFromEulerXYZ(const VECTOR& localDir, const VECTOR& rotRad, const VECTOR& fallback = VGet(0, 1, 0)) noexcept
+	{
+		const MATRIX m = RotFromEulerXYZ(rotRad);
+		const VECTOR w = VTransform(localDir, m);
+		return SafeNomalize(w, fallback);
+	}
+
+	// 方向ショートカット
+	inline VECTOR UpFromEulerXYZ(const VECTOR& rotRad) noexcept
+	{
+		return DirFromEulerXYZ(VGet(0, 1, 0), rotRad, VGet(0, 1, 0));
+	}
+
+	inline VECTOR ForwardFromEulerXYZ(const VECTOR& rotRad) noexcept
+	{
+		return DirFromEulerXYZ(VGet(0, 0, 1), rotRad, VGet(0, 0, 1));
+	}
+
+	inline VECTOR RightFromEulerXYZ(const VECTOR& rotRad) noexcept
+	{
+		return DirFromEulerXYZ(VGet(1, 0, 0), rotRad, VGet(1, 0, 0));
 	}
 }

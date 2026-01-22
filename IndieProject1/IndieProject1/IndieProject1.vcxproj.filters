@@ -22,29 +22,35 @@
     <Filter Include="TimeFile">
       <UniqueIdentifier>{06da295f-ed32-4cf6-90e2-69aee6527120}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CharcterFile\BaseFile">
-      <UniqueIdentifier>{9bce4a27-3bcb-4681-90c8-6597b152779c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ColliderFile">
       <UniqueIdentifier>{76926fdb-5699-4eaf-ba5b-5b1e0c078ca1}</UniqueIdentifier>
     </Filter>
     <Filter Include="MathFile">
       <UniqueIdentifier>{8ab0a0dc-f0e6-4f4d-9edf-037bfe8d8f46}</UniqueIdentifier>
     </Filter>
-    <Filter Include="MathFile\MathFile">
-      <UniqueIdentifier>{6dac8d5d-585a-43db-8632-bb898304ec91}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MathFile\ColliderMathFile">
-      <UniqueIdentifier>{788e6c56-04aa-493c-ad58-028a7100a619}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="MathFile\GeometryFile">
-      <UniqueIdentifier>{73e172cf-2137-4601-8ffd-3f88edd27923}</UniqueIdentifier>
-    </Filter>
     <Filter Include="ManagerFile\Seane">
       <UniqueIdentifier>{2ac4e504-2e60-4a5b-9c0f-d7976f73cd84}</UniqueIdentifier>
     </Filter>
     <Filter Include="TransformFile">
       <UniqueIdentifier>{a54386ee-2fe1-4107-b115-b5be0b94ea42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile\Math">
+      <UniqueIdentifier>{6dac8d5d-585a-43db-8632-bb898304ec91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile\Geometry">
+      <UniqueIdentifier>{73e172cf-2137-4601-8ffd-3f88edd27923}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CharcterFile\Base">
+      <UniqueIdentifier>{9bce4a27-3bcb-4681-90c8-6597b152779c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile\Collider">
+      <UniqueIdentifier>{77663d87-8f8f-4fc7-9b44-cf4599b55b66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile\Collider\CollisionTest">
+      <UniqueIdentifier>{749c6a25-473e-44f1-ac9a-449874a61649}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathFile\Collider\ColliderMath">
+      <UniqueIdentifier>{788e6c56-04aa-493c-ad58-028a7100a619}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -58,7 +64,10 @@
       <Filter>TimeFile</Filter>
     </ClCompile>
     <ClCompile Include="ColliderMath.cpp">
-      <Filter>MathFile\ColliderMathFile</Filter>
+      <Filter>MathFile\Collider\ColliderMath</Filter>
+    </ClCompile>
+    <ClCompile Include="CapsuleCollider.cpp">
+      <Filter>ColliderFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -69,22 +78,22 @@
       <Filter>TimeFile</Filter>
     </ClInclude>
     <ClInclude Include="Character.hpp">
-      <Filter>CharcterFile\BaseFile</Filter>
+      <Filter>CharcterFile\Base</Filter>
     </ClInclude>
     <ClInclude Include="ICollider.hpp">
       <Filter>ColliderFile</Filter>
     </ClInclude>
     <ClInclude Include="ColliderMath.hpp">
-      <Filter>MathFile\ColliderMathFile</Filter>
+      <Filter>MathFile\Collider\ColliderMath</Filter>
     </ClInclude>
     <ClInclude Include="DxMath.hpp">
-      <Filter>MathFile\MathFile</Filter>
+      <Filter>MathFile\Math</Filter>
     </ClInclude>
     <ClInclude Include="MathUtil.hpp">
-      <Filter>MathFile\MathFile</Filter>
+      <Filter>MathFile\Math</Filter>
     </ClInclude>
     <ClInclude Include="Geometry.hpp">
-      <Filter>MathFile\GeometryFile</Filter>
+      <Filter>MathFile\Geometry</Filter>
     </ClInclude>
     <ClInclude Include="Transform.hpp">
       <Filter>TransformFile</Filter>
@@ -94,6 +103,12 @@
     </ClInclude>
     <ClInclude Include="CapsuleCollider.hpp">
       <Filter>ColliderFile</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionTest.hpp">
+      <Filter>MathFile\Collider\CollisionTest</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionTest.cpp">
+      <Filter>MathFile\Collider\CollisionTest</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

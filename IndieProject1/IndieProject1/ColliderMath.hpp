@@ -49,4 +49,7 @@ namespace collision
 
 	// capsule vs capsule
 	bool CapsuleCapsule(const Capsule& a, const Capsule& b, HitResult* out = nullptr) noexcept;
+
+	// sphere vs sphere
+	bool SphereSphere(const Sphere& a, const Sphere& b, HitResult* out = nullptr) noexcept;
 }
