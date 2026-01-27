@@ -143,9 +143,11 @@
     <ClCompile Include="ColliderMath.cpp" />
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="SphereCollider.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="CapsuleCollider.hpp" />
     <ClInclude Include="Character.hpp" />
     <ClInclude Include="ColliderMath.hpp" />

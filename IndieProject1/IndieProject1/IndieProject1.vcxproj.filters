@@ -52,6 +52,18 @@
     <Filter Include="MathFile\Collider\ColliderMath">
       <UniqueIdentifier>{788e6c56-04aa-493c-ad58-028a7100a619}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ColliderFile\CapsuleFile">
+      <UniqueIdentifier>{7860b7f0-3bd8-472d-a737-6f3793a1b008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ColliderFile\SphereFile">
+      <UniqueIdentifier>{0cc5d294-008b-4420-bb21-b628ff655c4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ColliderFile\InterfaceFile">
+      <UniqueIdentifier>{dedd6c35-fbb1-41cd-bbc0-ed9c06b559fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CameraFile">
+      <UniqueIdentifier>{0588d8b1-bcad-4720-8ce4-dcbd557828ea}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -67,7 +79,10 @@
       <Filter>MathFile\Collider\ColliderMath</Filter>
     </ClCompile>
     <ClCompile Include="CapsuleCollider.cpp">
-      <Filter>ColliderFile</Filter>
+      <Filter>ColliderFile\CapsuleFile</Filter>
+    </ClCompile>
+    <ClCompile Include="SphereCollider.cpp">
+      <Filter>ColliderFile\SphereFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -79,9 +94,6 @@
     </ClInclude>
     <ClInclude Include="Character.hpp">
       <Filter>CharcterFile\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="ICollider.hpp">
-      <Filter>ColliderFile</Filter>
     </ClInclude>
     <ClInclude Include="ColliderMath.hpp">
       <Filter>MathFile\Collider\ColliderMath</Filter>
@@ -98,17 +110,23 @@
     <ClInclude Include="Transform.hpp">
       <Filter>TransformFile</Filter>
     </ClInclude>
-    <ClInclude Include="SphereCollider.hpp">
-      <Filter>ColliderFile</Filter>
-    </ClInclude>
-    <ClInclude Include="CapsuleCollider.hpp">
-      <Filter>ColliderFile</Filter>
-    </ClInclude>
     <ClInclude Include="CollisionTest.hpp">
       <Filter>MathFile\Collider\CollisionTest</Filter>
     </ClInclude>
     <ClInclude Include="CollisionTest.cpp">
       <Filter>MathFile\Collider\CollisionTest</Filter>
+    </ClInclude>
+    <ClInclude Include="CapsuleCollider.hpp">
+      <Filter>ColliderFile\CapsuleFile</Filter>
+    </ClInclude>
+    <ClInclude Include="SphereCollider.hpp">
+      <Filter>ColliderFile\SphereFile</Filter>
+    </ClInclude>
+    <ClInclude Include="ICollider.hpp">
+      <Filter>ColliderFile\InterfaceFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>CameraFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
