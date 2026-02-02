@@ -84,6 +84,9 @@
     <ClCompile Include="SphereCollider.cpp">
       <Filter>ColliderFile\SphereFile</Filter>
     </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>CameraFile</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.hpp">
@@ -125,7 +128,7 @@
     <ClInclude Include="ICollider.hpp">
       <Filter>ColliderFile\InterfaceFile</Filter>
     </ClInclude>
-    <ClInclude Include="Camera.h">
+    <ClInclude Include="Camera.hpp">
       <Filter>CameraFile</Filter>
     </ClInclude>
   </ItemGroup>

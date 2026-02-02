@@ -78,6 +78,16 @@ namespace dxmath
 		return SafeNomalize(Sub(to, from), fallback);
 	}
 
+	// 線形補間
+	inline VECTOR Lerp(const VECTOR& a, const VECTOR& b, float t) noexcept
+	{
+		return VGet(
+			a.x + (b.x - a.x) * t,
+			a.y + (b.y - a.y) * t,
+			a.z + (b.z - a.z) * t
+		);
+	}
+
 	// ラジアン -> 回転行列
 	inline MATRIX RotFromEulerXYZ(const VECTOR& rotRad) noexcept
 	{
