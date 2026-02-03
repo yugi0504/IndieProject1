@@ -67,7 +67,7 @@ public:
 	void SetThirdPersonOffset(const VECTOR& offsetLocal) noexcept { m_tpsOffsetLocal = offsetLocal; }
 
 	// FPSê›íË
-	void SetFirstPersonEyeOffset(const VECTOR& offsetLocal) noexcept { m_fpsOffsetLocal = offsetLocal; }
+	void SetFirstPersonEyeOffset(const VECTOR& offsetLocal) noexcept { m_fpsEyeOffsetLocal = offsetLocal; }
 
 	// éãñÏäp
 	void SetFovY(float fovYRad) noexcept { m_fovY = fovYRad; }
@@ -91,6 +91,7 @@ public:
 
 private:
 
+	// ÉJÉÅÉâìKóp
 	void ApplyToDxLib() const noexcept;
 
 };

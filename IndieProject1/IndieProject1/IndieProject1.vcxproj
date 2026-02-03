@@ -143,6 +143,7 @@
     <ClCompile Include="CapsuleCollider.cpp" />
     <ClCompile Include="ColliderMath.cpp" />
     <ClCompile Include="GameManager.cpp" />
+    <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SphereCollider.cpp" />
     <ClCompile Include="Time.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="GameManager.hpp" />
     <ClInclude Include="Geometry.hpp" />
     <ClInclude Include="ICollider.hpp" />
+    <ClInclude Include="Input.hpp" />
     <ClInclude Include="MathUtil.hpp" />
     <ClInclude Include="SphereCollider.hpp" />
     <ClInclude Include="Time.hpp" />

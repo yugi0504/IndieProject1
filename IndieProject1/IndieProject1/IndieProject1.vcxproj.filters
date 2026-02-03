@@ -64,6 +64,9 @@
     <Filter Include="CameraFile">
       <UniqueIdentifier>{0588d8b1-bcad-4720-8ce4-dcbd557828ea}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ManagerFile\InputFile">
+      <UniqueIdentifier>{2856a985-8b04-41b0-b3f0-c0bc697d6374}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -86,6 +89,9 @@
     </ClCompile>
     <ClCompile Include="Camera.cpp">
       <Filter>CameraFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>ManagerFile\InputFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +136,9 @@
     </ClInclude>
     <ClInclude Include="Camera.hpp">
       <Filter>CameraFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.hpp">
+      <Filter>ManagerFile\InputFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
