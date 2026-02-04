@@ -13,9 +13,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="ManagerFile\Game">
-      <UniqueIdentifier>{9daf35ae-67ac-4245-bd92-8425e1b7a634}</UniqueIdentifier>
-    </Filter>
     <Filter Include="CharcterFile">
       <UniqueIdentifier>{0d02c0c0-6597-4714-bd1a-9406aea9bde9}</UniqueIdentifier>
     </Filter>
@@ -67,13 +64,16 @@
     <Filter Include="ManagerFile\InputFile">
       <UniqueIdentifier>{2856a985-8b04-41b0-b3f0-c0bc697d6374}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ManagerFile\GameFile">
+      <UniqueIdentifier>{9daf35ae-67ac-4245-bd92-8425e1b7a634}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>MainFile</Filter>
     </ClCompile>
     <ClCompile Include="GameManager.cpp">
-      <Filter>ManagerFile\Game</Filter>
+      <Filter>ManagerFile\GameFile</Filter>
     </ClCompile>
     <ClCompile Include="Time.cpp">
       <Filter>TimeFile</Filter>
@@ -96,7 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameManager.hpp">
-      <Filter>ManagerFile\Game</Filter>
+      <Filter>ManagerFile\GameFile</Filter>
     </ClInclude>
     <ClInclude Include="Time.hpp">
       <Filter>TimeFile</Filter>
