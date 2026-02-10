@@ -67,6 +67,12 @@
     <Filter Include="ManagerFile\GameFile">
       <UniqueIdentifier>{9daf35ae-67ac-4245-bd92-8425e1b7a634}</UniqueIdentifier>
     </Filter>
+    <Filter Include="StatusFile">
+      <UniqueIdentifier>{1eb20f41-1cdf-4dbe-b6cb-4fa802857a9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DamageFile">
+      <UniqueIdentifier>{325a2b16-e392-4255-8c49-1e64091d5fd9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -92,6 +98,9 @@
     </ClCompile>
     <ClCompile Include="Input.cpp">
       <Filter>ManagerFile\InputFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>CharcterFile\Base</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +148,12 @@
     </ClInclude>
     <ClInclude Include="Input.hpp">
       <Filter>ManagerFile\InputFile</Filter>
+    </ClInclude>
+    <ClInclude Include="CharacterStatus.hpp">
+      <Filter>StatusFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Damage.hpp">
+      <Filter>DamageFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -60,7 +60,7 @@ namespace collision
 		const float rSum = a.radius + b.radius;
 		const float rSumSq = rSum * rSum;
 
-		if (ss.distSq > rSumSq);
+		if (ss.distSq > rSumSq)
 		{
 			if (out) *out = HitResult{};
 			return false;

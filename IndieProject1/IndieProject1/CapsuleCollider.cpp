@@ -6,6 +6,9 @@ void CapsuleCollider::SetWorld(const Transform& world)
 	m_worldUpDir = dxmath::UpFromEulerXYZ(world.rotate);
 
 	const float s = max(max(world.scale.x, world.scale.y), world.scale.z);
+
+	m_worldHalfSegment = m_localHalfSegment * s;
+	m_worldRadius = m_localRadius * s;
 }
 
 collision::Capsule CapsuleCollider::ToCollisionCapsule() const noexcept
