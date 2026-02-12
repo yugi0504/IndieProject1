@@ -146,6 +146,7 @@
     <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlayerMove.cpp" />
     <ClCompile Include="SphereCollider.cpp" />
     <ClCompile Include="Time.cpp" />
   </ItemGroup>
@@ -164,6 +165,7 @@
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="Input.hpp" />
     <ClInclude Include="MathUtil.hpp" />
+    <ClInclude Include="PlayerMove.hpp" />
     <ClInclude Include="SphereCollider.hpp" />
     <ClInclude Include="Time.hpp" />
     <ClInclude Include="Transform.hpp" />

@@ -121,4 +121,16 @@ namespace dxmath
 	{
 		return DirFromEulerXYZ(VGet(1, 0, 0), rotRad, VGet(1, 0, 0));
 	}
+
+	// ベクトルをXZ平面に投影
+	inline VECTOR Horizontal(const VECTOR& v) noexcept
+	{
+		return VGet(v.x, 0.0f, v.y);
+	}
+	// up(上方向)に対してベクトルを平面に東映
+	inline VECTOR ProjectOnPlane(const VECTOR& v, const VECTOR& planeNomal) noexcept
+	{
+		const VECTOR n = SafeNomalize(planeNomal, VGet(0, 1, 0));
+		return Sub(v, Mult(n, Dot(v, n)));
+	}
 }

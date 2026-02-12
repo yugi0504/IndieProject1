@@ -73,6 +73,9 @@
     <Filter Include="DamageFile">
       <UniqueIdentifier>{325a2b16-e392-4255-8c49-1e64091d5fd9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ManagerFile\MoveFile">
+      <UniqueIdentifier>{580ad159-97db-4de2-87aa-bb33701afb40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -101,6 +104,9 @@
     </ClCompile>
     <ClCompile Include="Character.cpp">
       <Filter>CharcterFile\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerMove.cpp">
+      <Filter>ManagerFile\MoveFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -154,6 +160,9 @@
     </ClInclude>
     <ClInclude Include="Damage.hpp">
       <Filter>DamageFile</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerMove.hpp">
+      <Filter>ManagerFile\MoveFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

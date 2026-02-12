@@ -89,6 +89,9 @@ public:
 	const VECTOR& GetTarget() const noexcept { return m_lookAt; }
 	const VECTOR& GetUp() const noexcept { return m_up; }
 
+	VECTOR GetMoveForward() const noexcept;
+	VECTOR GetMoveRight() const noexcept;
+
 private:
 
 	// ƒJƒƒ‰“K—p

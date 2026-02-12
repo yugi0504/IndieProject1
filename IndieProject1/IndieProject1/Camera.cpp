@@ -81,3 +81,19 @@ void Camera::ApplyToDxLib() const noexcept
 
 	SetCameraPositionAndTargetAndUpVec(m_camPos, m_lookAt, m_up);
 }
+
+VECTOR Camera::GetMoveForward() const noexcept
+{
+	const VECTOR rot = VGet(0.0f, m_yaw, 0.0f);
+	VECTOR f = dxmath::ForwardFromEulerXYZ(rot);
+	f.y = 0.0f;
+	return dxmath::SafeNomalize(f, VGet(0, 0, 1));
+}
+
+VECTOR Camera::GetMoveRight() const noexcept
+{
+	const VECTOR rot = VGet(0.0f, m_yaw, 0.0f);
+	VECTOR r = dxmath::ForwardFromEulerXYZ(rot);
+	r.y = 0.0f;
+	return dxmath::SafeNomalize(r, VGet(1, 0, 0));
+}
