@@ -37,9 +37,6 @@
     <Filter Include="MathFile\Geometry">
       <UniqueIdentifier>{73e172cf-2137-4601-8ffd-3f88edd27923}</UniqueIdentifier>
     </Filter>
-    <Filter Include="CharcterFile\Base">
-      <UniqueIdentifier>{9bce4a27-3bcb-4681-90c8-6597b152779c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="MathFile\Collider">
       <UniqueIdentifier>{77663d87-8f8f-4fc7-9b44-cf4599b55b66}</UniqueIdentifier>
     </Filter>
@@ -73,8 +70,17 @@
     <Filter Include="DamageFile">
       <UniqueIdentifier>{325a2b16-e392-4255-8c49-1e64091d5fd9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ManagerFile\MoveFile">
+    <Filter Include="CharcterFile\BaseFile">
+      <UniqueIdentifier>{9bce4a27-3bcb-4681-90c8-6597b152779c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CharcterFile\PlayerFile">
+      <UniqueIdentifier>{60342f17-91fc-40db-aead-4d4b8ca6f23e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CharcterFile\PlayerFile\MoveFile">
       <UniqueIdentifier>{580ad159-97db-4de2-87aa-bb33701afb40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CharcterFile\PlayerFile\AttackFile">
+      <UniqueIdentifier>{c242c8ab-2af4-4808-8ed1-ff9acb7bd8f4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -103,10 +109,13 @@
       <Filter>ManagerFile\InputFile</Filter>
     </ClCompile>
     <ClCompile Include="Character.cpp">
-      <Filter>CharcterFile\Base</Filter>
+      <Filter>CharcterFile\BaseFile</Filter>
     </ClCompile>
     <ClCompile Include="PlayerMove.cpp">
-      <Filter>ManagerFile\MoveFile</Filter>
+      <Filter>CharcterFile\PlayerFile\MoveFile</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerAttack.cpp">
+      <Filter>CharcterFile\PlayerFile\AttackFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,7 +126,7 @@
       <Filter>TimeFile</Filter>
     </ClInclude>
     <ClInclude Include="Character.hpp">
-      <Filter>CharcterFile\Base</Filter>
+      <Filter>CharcterFile\BaseFile</Filter>
     </ClInclude>
     <ClInclude Include="ColliderMath.hpp">
       <Filter>MathFile\Collider\ColliderMath</Filter>
@@ -162,7 +171,10 @@
       <Filter>DamageFile</Filter>
     </ClInclude>
     <ClInclude Include="PlayerMove.hpp">
-      <Filter>ManagerFile\MoveFile</Filter>
+      <Filter>CharcterFile\PlayerFile\MoveFile</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerAttack.hpp">
+      <Filter>CharcterFile\PlayerFile\AttackFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
