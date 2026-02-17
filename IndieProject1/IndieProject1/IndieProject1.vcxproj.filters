@@ -82,6 +82,9 @@
     <Filter Include="CharcterFile\PlayerFile\AttackFile">
       <UniqueIdentifier>{c242c8ab-2af4-4808-8ed1-ff9acb7bd8f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CharcterFile\PlayerFile\CharacterFile">
+      <UniqueIdentifier>{62361692-e243-4f4d-9ecb-69ccaed395ca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -116,6 +119,9 @@
     </ClCompile>
     <ClCompile Include="PlayerAttack.cpp">
       <Filter>CharcterFile\PlayerFile\AttackFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>CharcterFile\PlayerFile\CharacterFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +181,9 @@
     </ClInclude>
     <ClInclude Include="PlayerAttack.hpp">
       <Filter>CharcterFile\PlayerFile\AttackFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.hpp">
+      <Filter>CharcterFile\PlayerFile\CharacterFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

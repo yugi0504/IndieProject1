@@ -1,6 +1,7 @@
 #pragma once
 #include "memory"
 #include "DxLib.h"
+#include "Character.hpp"
 #include "CapsuleCollider.hpp"
 #include "Transform.hpp"
 #include "Damage.hpp"
@@ -9,8 +10,8 @@
 #include "DxMath.hpp"
 #include "MathUtil.hpp"
 
-
 using namespace std;
+
 class Character;
 
 class PlayerAttack
