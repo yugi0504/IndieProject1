@@ -2,9 +2,16 @@
   CapsuleCollider.cpp
   Character.cpp
   ColliderMath.cpp
+  GameManager.cpp
   Input.cpp
+  main.cpp
+  Player.cpp
+  PlayerAttack.cpp
+  PlayerMove.cpp
   SphereCollider.cpp
+C:\Users\student\Desktop\workspace\IndieProject1\IndieProject1\IndieProject1\PlayerMove.cpp(3,18): error C2382: 'PlayerMove::Initialize': 再定義 ; 異なる例外指定です。
+      C:\Users\student\Desktop\workspace\IndieProject1\IndieProject1\IndieProject1\PlayerMove.hpp(29,7):
+      'PlayerMove::Initialize' の宣言を確認してください
+  
   Time.cpp
   コードを生成中...
-LIBCMTD.lib(exe_winmain.obj) : error LNK2019: 未解決の外部シンボル WinMain が関数 "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ) で参照されました
-C:\Users\student\Desktop\IndieProject1\IndieProject1\x64\Debug\IndieProject1.exe : fatal error LNK1120: 1 件の未解決の外部参照

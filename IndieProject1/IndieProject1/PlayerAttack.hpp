@@ -49,7 +49,7 @@ private:
 
 public :
     void Initialize(const AttackDesc& light, const AttackDesc& heavy);
-    void Update(float deltaTime, Character& owner);
+    void Update(float deltaTime, const Transform& ownerTranceform);
 
     bool IsAttacking() const noexcept { return m_type != AttackType::None; }
     bool IsActive() const noexcept { return m_phase == Phase::Active; }

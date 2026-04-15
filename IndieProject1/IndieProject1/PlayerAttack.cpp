@@ -8,7 +8,7 @@ void PlayerAttack::Initialize(const AttackDesc& light, const AttackDesc& heavy)
     m_hitCollider = make_shared<CapsuleCollider>(0.1f, 0.1f);
 }
 
-void PlayerAttack::Update(float deltaTime, Character& owner)
+void PlayerAttack::Update(float deltaTime, const Transform& ownerTransform)
 {
     // UŒ‚
     if (m_type == AttackType::None)
@@ -31,7 +31,7 @@ void PlayerAttack::Update(float deltaTime, Character& owner)
     // Active’†‚Ì‚Ý“–‚½‚è”»’è‚ðXV
     if (m_phase == Phase::Active)
     {
-        UpdateHitColliderWorld(owner.GetTransform());
+        UpdateHitColliderWorld(ownerTransform);
         m_hitCollider->SetWorld(m_hitWorld);
     }
 }
