@@ -40,6 +40,7 @@ void PlayerAttack::TryStart(AttackType type, const AttackDesc& desc)
 {
     m_type = type;
     m_phase = Phase::Windup;
+    m_timer = 0.0f;
     m_current = desc;
     m_currentDmg = desc.dmg;
 
@@ -48,7 +49,7 @@ void PlayerAttack::TryStart(AttackType type, const AttackDesc& desc)
 
 void PlayerAttack::AdvacePhase(float deltaTime)
 {
-    m_timer = deltaTime;
+    m_timer += deltaTime;
 
     switch (m_phase)
     {

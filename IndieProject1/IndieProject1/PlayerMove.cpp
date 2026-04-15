@@ -18,8 +18,8 @@ void PlayerMove::Update(float deltaTime, const PlayerMoveInput& in,
 
 	if (m_isDodging)
 	{
-		m_dodgeTime += deltaTime;
-		ioVelocity = dxmath::Mult(m_dodgeDir, m_sprintSpeed);
+		m_dodgeTimer += deltaTime;
+		ioVelocity = dxmath::Mult(m_dodgeDir, m_dodgeSpeed);
 
 		if (m_dodgeTimer >= m_dodgeTime)
 		{
