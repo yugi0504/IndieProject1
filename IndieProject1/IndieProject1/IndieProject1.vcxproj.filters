@@ -85,6 +85,9 @@
     <Filter Include="CharcterFile\PlayerFile\CharacterFile">
       <UniqueIdentifier>{62361692-e243-4f4d-9ecb-69ccaed395ca}</UniqueIdentifier>
     </Filter>
+    <Filter Include="CharcterFile\EnemyFile">
+      <UniqueIdentifier>{c0013878-35d2-4745-bdbf-c86cefe666b9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -122,6 +125,9 @@
     </ClCompile>
     <ClCompile Include="Player.cpp">
       <Filter>CharcterFile\PlayerFile\CharacterFile</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>CharcterFile\EnemyFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -184,6 +190,9 @@
     </ClInclude>
     <ClInclude Include="Player.hpp">
       <Filter>CharcterFile\PlayerFile\CharacterFile</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.hpp">
+      <Filter>CharcterFile\EnemyFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
