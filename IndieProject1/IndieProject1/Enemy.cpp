@@ -13,7 +13,12 @@ void Enemy::Initialize(int modelHandle)
 
 }
 
-void Enemy::OnUpdate(float demtaTime)
+std::shared_ptr<CapsuleCollider> Enemy::GetHurtCollider() const noexcept
+{
+	return m_bodyCollider;
+}
+
+void Enemy::OnUpdate(float deltaTime)
 {
 	
 

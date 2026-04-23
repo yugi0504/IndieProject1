@@ -27,3 +27,11 @@ void CapsuleCollider::Draw() const
 
 	DrawCapsule3D(ep.p0, ep.p1, m_worldRadius, 12, m_debugColor, m_debugColor, FALSE);
 }
+
+CapsuleCollider CapsuleCollider::GetCapsule() const noexcept
+{
+	return CapsuleCollider{
+		m_worldCenter,
+		m_worldUpDir,
+	}
+}

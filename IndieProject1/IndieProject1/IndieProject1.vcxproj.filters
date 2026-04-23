@@ -88,6 +88,9 @@
     <Filter Include="CharcterFile\EnemyFile">
       <UniqueIdentifier>{c0013878-35d2-4745-bdbf-c86cefe666b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ManagerFile\CombatFile">
+      <UniqueIdentifier>{065d924e-1605-48c4-9d0a-131b09c830a2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -128,6 +131,9 @@
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>CharcterFile\EnemyFile</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatManager.cpp">
+      <Filter>ManagerFile\CombatFile</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +199,9 @@
     </ClInclude>
     <ClInclude Include="Enemy.hpp">
       <Filter>CharcterFile\EnemyFile</Filter>
+    </ClInclude>
+    <ClInclude Include="CombatManager.hpp">
+      <Filter>ManagerFile\CombatFile</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -39,6 +39,8 @@ public:
 	~Player() override = default;
 
 	void Initialize(int modelHandle, Camera* camera);
+	const PlayerAttack& GetAttack() const noexcept { return m_attack; }
+	PlayerAttack& GetAttack() noexcept { return m_attack; }
 
 protected:
 	void OnUpdate(float deltaTime) override;

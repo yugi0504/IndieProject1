@@ -47,9 +47,14 @@ private:
     shared_ptr<CapsuleCollider> m_hitCollider;
     Transform m_hitWorld;
 
+    bool m_hasHit = false;
+
 public :
     void Initialize(const AttackDesc& light, const AttackDesc& heavy);
     void Update(float deltaTime, const Transform& ownerTranceform);
+
+    bool HasHit() const noexcept { return m_hasHit; }
+    void MarkHit() noexcept { m_hasHit = true; }
 
     bool IsAttacking() const noexcept { return m_type != AttackType::None; }
     bool IsActive() const noexcept { return m_phase == Phase::Active; }

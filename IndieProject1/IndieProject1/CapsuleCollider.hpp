@@ -34,5 +34,5 @@ public :
 
 	collision::Capsule ToCollisionCapsule() const noexcept;
 
-
+	CapsuleCollider GetCapsule() const noexcept;
 };
