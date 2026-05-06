@@ -20,7 +20,15 @@ std::shared_ptr<CapsuleCollider> Enemy::GetHurtCollider() const noexcept
 
 void Enemy::OnUpdate(float deltaTime)
 {
-	
+	// 被弾アクション更新
+	if (m_damageFlashTimer > 0.0f)
+	{
+		m_damageFlashTimer -= deltaTime;
+		if (m_damageFlashTimer < 0.0f)
+		{
+			m_damageFlashTimer = 0.0f;
+		}
+	}
 
 	if (input::KeyTrigger(KEY_INPUT_F2))
 	{
@@ -31,7 +39,11 @@ void Enemy::OnUpdate(float deltaTime)
 
 void Enemy::OnDraw()
 {
-	if (m_modelHandle >= 0)
+	// 被弾時点滅
+	const bool isFlashing = (m_damageFlashTimer > 0.0f);
+	const bool skipDraw = isFlashing && (GetNowCount() / 50 % 2 == 0);
+
+	if (m_modelHandle >= 0 && !skipDraw)
 	{
 		MV1SetPosition(m_modelHandle, m_transform.position);
 		MV1SetRotationXYZ(m_modelHandle, m_transform.rotate);
@@ -46,11 +58,25 @@ void Enemy::OnDraw()
 
 void Enemy::OnDamaged(const DamageInfo& dmg)
 {
+	// 被弾演出
+	m_damageFlashTimer = m_damageFlashTime;
+
+	// 追加予定
+	// - 被弾SE
+	// - ヒットエフェクト
+	// - 被弾モーション
 
 }
 
 void Enemy::OnDead()
 {
+	m_modelHandle = -1;
+
+	// 追加予定
+	// - 死亡演出
+	// - 死亡エフェクト
+	// - 撃破処理
+
 
 }
 

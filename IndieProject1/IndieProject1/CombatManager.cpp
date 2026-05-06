@@ -17,9 +17,13 @@ namespace combat
 		collision::HitResult hr{};
 		if (collision::CapsuleCapsule(hit->ToCollisionCapsule(),hurt->ToCollisionCapsule(),&hr))
 		{
+			DamageInfo dmg = atk.GetDamage();
+
+			// 接触法線方向にノックバック
+			dmg.impulse = dxmath::Mult(hr.normal, 4.0f);
+
 			enemy.ApplyDamage(atk.GetDamage());
 			atk.MarkHit();
-			
 		}
 	}
 }

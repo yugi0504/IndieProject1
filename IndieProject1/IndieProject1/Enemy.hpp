@@ -18,6 +18,10 @@ private:
 	shared_ptr<CapsuleCollider> m_bodyCollider;
 	bool m_drawColliderDebug = false;
 
+	// ”í’e‰‰o
+	float m_damageFlashTimer = 0.0f;
+	float m_damageFlashTime = 0.15f;
+
 	// ---------------------------
 	// ŠÖ”
 	// ---------------------------

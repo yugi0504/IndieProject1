@@ -7,10 +7,10 @@
 namespace mathutil
 {
 	// ’è”
-	inline constexpr float EPSILON = 1e-6f;
+	constexpr float EPSILON = 1e-6f;
 
 	// Šp“x
-	inline constexpr float PI = 3.14159265358979323846f;
+	constexpr float PI = 3.14159265358979323846f;
 
 
 	// Šp“x•ÏŠ·
