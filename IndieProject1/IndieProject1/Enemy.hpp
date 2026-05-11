@@ -15,7 +15,7 @@ class Enemy final : public Character
 
 private:
 	int m_modelHandle = -1;
-	shared_ptr<CapsuleCollider> m_bodyCollider;
+	std::shared_ptr<CapsuleCollider> m_bodyCollider;
 	bool m_drawColliderDebug = false;
 
 	// ”í’e‰‰o
@@ -32,7 +32,7 @@ public:
 
 	void Initialize(int modelHandle);
 
-	shared_ptr<CapsuleCollider> GetHurtCollider() const noexcept;
+	std::shared_ptr<CapsuleCollider> GetHurtCollider() const noexcept;
 
 protected:
 	void OnUpdate(float deltaTime) override;

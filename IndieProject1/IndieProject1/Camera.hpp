@@ -4,7 +4,7 @@
 #include "DxMath.hpp"
 #include "MathUtil.hpp"
 
-enum class Mode
+enum class CameraMode
 {
 	ThirdPerson,
 	FirstPerson
@@ -14,7 +14,7 @@ class Camera
 {
 private:
 
-	Mode m_mode = Mode::ThirdPerson;
+	CameraMode m_mode = CameraMode::ThirdPerson;
 	const Transform* m_target = nullptr;
 
 	// DxLibÇ…ìnÇ∑íl
@@ -56,8 +56,8 @@ public:
 	void Initialize(float fovYRad = 60.0f * (DX_PI_F / 180.0f), float nearZ = 0.1f, float farZ = 2000.0f) noexcept;
 	
 	// ÉÇÅ[Éhêÿë÷
-	void SetMode(Mode m) noexcept { m_mode = m; }
-	Mode GetMode() const noexcept { return m_mode; }
+	void SetMode(CameraMode m) noexcept { m_mode = m; }
+	CameraMode GetMode() const noexcept { return m_mode; }
 
 	// í«è]ëŒè€
 	void SetTarget(const Transform* target) noexcept { m_target = target; }

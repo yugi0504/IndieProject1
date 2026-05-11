@@ -38,7 +38,7 @@ void Camera::Update(float deltaTime, float mouseDx, float mouseDy) noexcept
 	VECTOR desiredPos{};
 	VECTOR desiredLock{};
 
-	if (m_mode == Mode::ThirdPerson)
+	if (m_mode == CameraMode::ThirdPerson)
 	{
 		const VECTOR offsetWorld =
 			VGet(right.x * m_tpsOffsetLocal.x + up.x * m_tpsOffsetLocal.y + forward.x * m_tpsOffsetLocal.z,

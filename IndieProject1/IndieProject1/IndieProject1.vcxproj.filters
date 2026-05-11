@@ -25,9 +25,6 @@
     <Filter Include="MathFile">
       <UniqueIdentifier>{8ab0a0dc-f0e6-4f4d-9edf-037bfe8d8f46}</UniqueIdentifier>
     </Filter>
-    <Filter Include="ManagerFile\Seane">
-      <UniqueIdentifier>{2ac4e504-2e60-4a5b-9c0f-d7976f73cd84}</UniqueIdentifier>
-    </Filter>
     <Filter Include="TransformFile">
       <UniqueIdentifier>{a54386ee-2fe1-4107-b115-b5be0b94ea42}</UniqueIdentifier>
     </Filter>
@@ -91,6 +88,33 @@
     <Filter Include="ManagerFile\CombatFile">
       <UniqueIdentifier>{065d924e-1605-48c4-9d0a-131b09c830a2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ManagerFile\SceneFIle">
+      <UniqueIdentifier>{2ac4e504-2e60-4a5b-9c0f-d7976f73cd84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\Interface">
+      <UniqueIdentifier>{94b4dabb-5b45-4aa8-839e-c1de9e0d7ed2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\SceneID">
+      <UniqueIdentifier>{fc8cad3c-7329-48de-adf4-3e3563f28bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\SceneManager">
+      <UniqueIdentifier>{f4828169-7c19-457c-991c-8be7dc5f6268}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\Scene">
+      <UniqueIdentifier>{9801bc13-dea0-48d2-9110-efb0a7dec0ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\Scene\TitleScene">
+      <UniqueIdentifier>{373808e7-b06f-4926-9b90-49e72631ff3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\Scene\GameScene">
+      <UniqueIdentifier>{89017876-f788-4a5f-b87e-8ddbab10c92b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\Scene\TutorialScene">
+      <UniqueIdentifier>{c57aaead-fcf1-4eb9-b587-b322618c37ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ManagerFile\SceneFIle\Scene\ResultScene">
+      <UniqueIdentifier>{f752ff7c-e7da-47d4-8c76-484d609ce457}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -134,6 +158,12 @@
     </ClCompile>
     <ClCompile Include="CombatManager.cpp">
       <Filter>ManagerFile\CombatFile</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>ManagerFile\SceneFIle\SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="TitleScene.cpp">
+      <Filter>ManagerFile\SceneFIle\Scene\TitleScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -202,6 +232,18 @@
     </ClInclude>
     <ClInclude Include="CombatManager.hpp">
       <Filter>ManagerFile\CombatFile</Filter>
+    </ClInclude>
+    <ClInclude Include="IScene.hpp">
+      <Filter>ManagerFile\SceneFIle\Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneId.hpp">
+      <Filter>ManagerFile\SceneFIle\SceneID</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.hpp">
+      <Filter>ManagerFile\SceneFIle\SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="TitleScene.hpp">
+      <Filter>ManagerFile\SceneFIle\Scene\TitleScene</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

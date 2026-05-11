@@ -25,7 +25,7 @@ void Time::Update()
 	if (m_delta > 0.10f) m_delta = 0.10f;
 }
 
-float Time::GetDeltaTime()const
+float Time::GetDeltaTime() const noexcept
 {
 	return m_delta;
 }

@@ -22,7 +22,7 @@ namespace combat
 			// 接触法線方向にノックバック
 			dmg.impulse = dxmath::Mult(hr.normal, 4.0f);
 
-			enemy.ApplyDamage(atk.GetDamage());
+			enemy.ApplyDamage(dmg);
 			atk.MarkHit();
 		}
 	}

@@ -151,8 +151,10 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="PlayerAttack.cpp" />
     <ClCompile Include="PlayerMove.cpp" />
+    <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="SphereCollider.cpp" />
     <ClCompile Include="Time.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.hpp" />
@@ -170,12 +172,16 @@
     <ClInclude Include="Geometry.hpp" />
     <ClInclude Include="ICollider.hpp" />
     <ClInclude Include="Input.hpp" />
+    <ClInclude Include="IScene.hpp" />
     <ClInclude Include="MathUtil.hpp" />
     <ClInclude Include="Player.hpp" />
     <ClInclude Include="PlayerAttack.hpp" />
     <ClInclude Include="PlayerMove.hpp" />
+    <ClInclude Include="SceneId.hpp" />
+    <ClInclude Include="SceneManager.hpp" />
     <ClInclude Include="SphereCollider.hpp" />
     <ClInclude Include="Time.hpp" />
+    <ClInclude Include="TitleScene.hpp" />
     <ClInclude Include="Transform.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

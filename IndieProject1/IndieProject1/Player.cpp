@@ -30,7 +30,7 @@ void Player::Initialize(int modelHandle, Camera* camera)
 	m_attack.Initialize(light, heavy);
 
 	// コライダー　詳細追加
-	m_bodyCollider = make_shared<CapsuleCollider>(0.8f, 0.4f);
+	m_bodyCollider = std::make_shared<CapsuleCollider>(0.8f, 0.4f);
 	AddCollider(m_bodyCollider);
 
 	// カメラ追従

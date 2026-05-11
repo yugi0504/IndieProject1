@@ -11,12 +11,12 @@ private:
 
 	Time() = default;
 
-	void Update();
-
-	float GetDeltaTime() const;
 
 public:
 	// シングルトンアクセス
 	static Time& GetInstance();
 
+	void Update();
+
+	float GetDeltaTime() const noexcept;
 };

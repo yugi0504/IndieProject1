@@ -10,7 +10,6 @@
 #include "DxMath.hpp"
 #include "MathUtil.hpp"
 
-using namespace std;
 
 class Character;
 

@@ -36,8 +36,8 @@ namespace input
 
 		if (lockCenter && screenW > 1 && screenH > 1 &&GetWindowActiveFlag() != 0)
 		{
-			const int cx = screenH / 2;
-			const int cy = screenW / 2;
+			const int cx = screenW / 2;
+			const int cy = screenH / 2;
 
 			mouseDx = x - cx;
 			mouseDy = y - cy;

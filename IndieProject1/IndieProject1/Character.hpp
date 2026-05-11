@@ -8,7 +8,6 @@
 #include "memory"
 #include "DxMath.hpp"
 
-using namespace std;
 
 class Character
 {

@@ -4,7 +4,7 @@ void Enemy::Initialize(int modelHandle)
 {
 	m_modelHandle = modelHandle;
 
-	m_bodyCollider = make_shared<CapsuleCollider>(1.0f, 0.5f);
+	m_bodyCollider = std::make_shared<CapsuleCollider>(1.0f, 0.5f);
 
 	AddCollider(m_bodyCollider);
 

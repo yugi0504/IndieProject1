@@ -1,5 +1,5 @@
 #pragma once
-#include "memory"
+#include <memory>
 
 #include "Character.hpp"
 #include "Transform.hpp"
@@ -18,7 +18,6 @@ class Player final : public Character
 	// --------------------
 
 private:
-	char* m_handleName;
 	int m_modelHandle = -1;
 
 	Camera* m_camera = nullptr;
